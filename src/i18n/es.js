@@ -130,6 +130,15 @@ const es = {
         tags: ['Next.js', 'Node.js', 'MaterialUI'],
         status: 'professional',
       },
+      {
+        title: 'Plataforma Inmobiliaria',
+        description:
+          'Plataforma web full-stack para gestión y publicación de propiedades inmobiliarias. Incluye listado de propiedades con filtros, detalle de cada unidad y formulario de contacto con envío de emails.',
+        tags: ['React', 'MUI', 'Express.js', 'Prisma', 'Node.js', 'Zod'],
+        status: 'personal',
+        hidden: true,
+        repo: 'https://github.com/nicolasloza/ap-web',
+      },
     ],
   },
 
@@ -142,6 +151,19 @@ const es = {
     location: 'Ubicación',
     linkedin: 'LinkedIn',
     locationValue: 'Buenos Aires, Argentina',
+    form: {
+      title: 'Enviame un mensaje',
+      name: 'Nombre',
+      email: 'Email',
+      message: 'Mensaje',
+      send: 'Enviar',
+      sending: 'Enviando...',
+      successTitle: '¡Mensaje enviado!',
+      successText: 'Gracias por escribirme. Te respondo a la brevedad.',
+      sendAnother: 'Enviar otro mensaje',
+      error: 'Hubo un error al enviar. Intentá de nuevo o escribime directo al email.',
+      emailError: 'Ingresá un email válido.',
+    },
   },
 
   // CV Modal

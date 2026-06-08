@@ -130,6 +130,15 @@ const en = {
         tags: ['Next.js', 'Node.js', 'MaterialUI'],
         status: 'professional',
       },
+      {
+        title: 'Real Estate Platform',
+        description:
+          'Full-stack web platform for managing and publishing real estate listings. Includes property listing with filters, unit detail pages, and a contact form with email delivery.',
+        tags: ['React', 'MUI', 'Express.js', 'Prisma', 'Node.js', 'Zod'],
+        status: 'personal',
+        hidden: true,
+        repo: 'https://github.com/nicolasloza/ap-web',
+      },
     ],
   },
 
@@ -142,6 +151,19 @@ const en = {
     location: 'Location',
     linkedin: 'LinkedIn',
     locationValue: 'Buenos Aires, Argentina',
+    form: {
+      title: 'Send me a message',
+      name: 'Name',
+      email: 'Email',
+      message: 'Message',
+      send: 'Send',
+      sending: 'Sending...',
+      successTitle: 'Message sent!',
+      successText: "Thanks for reaching out. I'll get back to you shortly.",
+      sendAnother: 'Send another message',
+      error: 'Something went wrong. Please try again or email me directly.',
+      emailError: 'Please enter a valid email address.',
+    },
   },
 
   // CV Modal

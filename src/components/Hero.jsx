@@ -58,7 +58,7 @@ export default function Hero({ onOpenCv }) {
           alignItems: 'center',
           justifyContent: 'space-between',
           flexDirection: { xs: 'column-reverse', md: 'row' },
-          gap: { xs: 6, md: 4 },
+          gap: { xs: 6, md: 6 },
         }}>
 
           {/* Left: text content */}
@@ -182,12 +182,12 @@ export default function Hero({ onOpenCv }) {
                 maskComposite: 'exclude',
               }} />
 
-              {/* Avatar — swap src with your photo URL to use a real image */}
               <Avatar
-                src=""
+                src={`${import.meta.env.BASE_URL}profile.png`}
+                alt="Nicolás Loza Spataro"
                 sx={{
-                  width: { xs: 200, md: 260 },
-                  height: { xs: 200, md: 260 },
+                  width: { xs: 240, md: 370 },
+                  height: { xs: 240, md: 370 },
                   fontSize: { xs: '3.5rem', md: '4.5rem' },
                   fontWeight: 800,
                   background: 'linear-gradient(135deg, #1a0533 0%, #0d1f33 100%)',
@@ -196,10 +196,9 @@ export default function Hero({ onOpenCv }) {
                   position: 'relative',
                   zIndex: 1,
                   letterSpacing: '-2px',
+                  filter: 'brightness(1.05) contrast(1.08) saturate(1.1)',
                 }}
-              >
-                NLS
-              </Avatar>
+              />
             </Box>
           </MotionBox>
         </Box>

@@ -53,7 +53,7 @@ export default function Projects() {
         </MotionBox>
 
         <Grid container spacing={3}>
-          {cards.map((project, idx) => (
+          {cards.filter(p => !p.hidden).map((project, idx) => (
             <Grid item xs={12} sm={6} md={4} key={idx}>
               <MotionBox
                 initial={{ opacity: 0, y: 30 }}
@@ -142,9 +142,13 @@ export default function Projects() {
                     <Button
                       size="small"
                       startIcon={<GitHubIcon />}
-                      disabled
+                      component={project.repo ? 'a' : 'button'}
+                      href={project.repo || undefined}
+                      target={project.repo ? '_blank' : undefined}
+                      rel={project.repo ? 'noopener noreferrer' : undefined}
+                      disabled={!project.repo}
                       sx={{
-                        color: 'text.secondary',
+                        color: project.repo ? 'text.primary' : 'text.secondary',
                         '&.Mui-disabled': { color: 'rgba(255,255,255,0.2)' },
                       }}
                     >
@@ -153,7 +157,11 @@ export default function Projects() {
                     <Button
                       size="small"
                       startIcon={<OpenInNewIcon />}
-                      disabled
+                      component={project.demo ? 'a' : 'button'}
+                      href={project.demo || undefined}
+                      target={project.demo ? '_blank' : undefined}
+                      rel={project.demo ? 'noopener noreferrer' : undefined}
+                      disabled={!project.demo}
                       sx={{ '&.Mui-disabled': { color: 'rgba(255,255,255,0.2)' } }}
                     >
                       {viewDemo}
