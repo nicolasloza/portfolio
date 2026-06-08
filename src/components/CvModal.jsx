@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography'
 import Chip from '@mui/material/Chip'
 import IconButton from '@mui/material/IconButton'
 import CloseIcon from '@mui/icons-material/Close'
-import PrintIcon from '@mui/icons-material/Print'
+import DownloadIcon from '@mui/icons-material/Download'
 import EmailIcon from '@mui/icons-material/Email'
 import PhoneIcon from '@mui/icons-material/Phone'
 import LocationOnIcon from '@mui/icons-material/LocationOn'
@@ -255,7 +255,7 @@ export default function CvModal({ open, onClose }) {
         </Button>
         <Button
           variant="contained"
-          startIcon={<PrintIcon />}
+          startIcon={<DownloadIcon />}
           onClick={handlePrint}
           sx={{
             background: 'linear-gradient(135deg, #7C3AED, #5B21B6)',
