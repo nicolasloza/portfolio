@@ -138,7 +138,7 @@ export default function Projects() {
                     </Box>
                   </CardContent>
 
-                  <CardActions sx={{ p: 2.5, pt: 0, gap: 1, visibility: project.status === 'professional' ? 'hidden' : 'visible' }}>
+                  <CardActions sx={{ p: 2.5, pt: 0, gap: 1, display: project.status === 'professional' ? 'none' : 'flex' }}>
                     <Button
                       size="small"
                       startIcon={<GitHubIcon />}

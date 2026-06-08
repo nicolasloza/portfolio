@@ -78,7 +78,7 @@ export default function Navbar({ onOpenCv }) {
             }}
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
-            NLS
+            Nicolás Loza Spataro
           </Typography>
 
           {/* Desktop nav */}

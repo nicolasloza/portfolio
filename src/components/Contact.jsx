@@ -99,8 +99,8 @@ export default function Contact() {
     {
       icon: <PhoneIcon sx={{ color: 'secondary.main' }} />,
       label: c.phone,
-      value: '+51 911 5622 6313',
-      href: 'tel:+519115622 6313',
+      value: '+54 911 5622 6313',
+      href: 'tel:+5491156226313',
     },
     {
       icon: <LocationOnIcon sx={{ color: '#34D399' }} />,

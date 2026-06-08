@@ -8,7 +8,7 @@ import SchoolIcon from '@mui/icons-material/School'
 import {
   SiReact, SiNextdotjs, SiTypescript, SiJavascript,
   SiHtml5, SiCss, SiBootstrap, SiMui, SiTypeorm,
-  SiNodedotjs,
+  SiNodedotjs, SiExpress, SiMongodb,
   SiPostgresql, SiMysql,
   SiGit, SiGithub, SiJira, SiPostman, SiCircleci, SiClaude,
 } from 'react-icons/si'
@@ -53,11 +53,13 @@ const TECH_LIST = {
   ],
   backend: [
     { name: 'Node.js',      Icon: SiNodedotjs,        color: '#339933' },
+    { name: 'Express.js',   Icon: SiExpress,          color: '#ffffff' },
     { name: 'TypeORM',      Icon: SiTypeorm,          color: '#E83524' },
     { name: 'REST APIs',    Icon: TbApi,              color: '#06B6D4' },
   ],
   databases: [
     { name: 'PostgreSQL',   Icon: SiPostgresql,       color: '#4169E1' },
+    { name: 'MongoDB',      Icon: SiMongodb,          color: '#47A248' },
     { name: 'MySQL',        Icon: SiMysql,            color: '#4479A1' },
   ],
   tools: [

@@ -15,8 +15,10 @@ import LocationOnIcon from '@mui/icons-material/LocationOn'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import { useI18n } from '../App'
 
-const TECH_SKILLS = ['React.js', 'React Native', 'Next.js', 'TypeScript', 'JavaScript', 'Node.js', 'TypeORM', 'HTML5', 'CSS3', 'PostgreSQL', 'MySQL', 'Material UI', 'Bootstrap']
-const TOOLS = ['Git', 'GitHub', 'VSCode', 'Jira', 'Postman', 'Adobe XD', 'CircleCI']
+const TECH_SKILLS = ['React.js', 'React Native', 'Next.js', 'TypeScript', 'JavaScript', 'Node.js', 'Express.js', 'TypeORM', 'HTML5', 'CSS3', 'PostgreSQL', 'MongoDB', 'MySQL', 'Material UI', 'Bootstrap']
+const TOOLS = ['Git', 'GitHub', 'Cursor', 'Claude', 'Jira', 'Postman', 'CircleCI']
+const TEXT_BODY = 'rgba(255,255,255,0.82)'
+const ICON_MUTED = 'rgba(255,255,255,0.55)'
 
 function CvSection({ title, children }) {
   return (
@@ -53,7 +55,7 @@ function JobEntry({ role, company, period, description, stack }) {
       <Typography variant="caption" sx={{ color: '#06B6D4', fontWeight: 600, display: 'block', mb: 0.8 }}>
         {company}
       </Typography>
-      <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: '0.81rem', lineHeight: 1.7, mb: stack ? 1.2 : 0 }}>
+      <Typography variant="body2" sx={{ color: TEXT_BODY, fontSize: '0.81rem', lineHeight: 1.7, mb: stack ? 1.2 : 0 }}>
         {description}
       </Typography>
       {stack && (
@@ -79,7 +81,12 @@ export default function CvModal({ open, onClose }) {
   const exp = t.experience
   const skills = t.skills
 
-  const handlePrint = () => window.print()
+  const handlePrint = () => {
+    const link = document.createElement('a')
+    link.href = `${import.meta.env.BASE_URL}Nicolas_Loza_cv.pdf`
+    link.download = 'Nicolas_Loza_cv.pdf'
+    link.click()
+  }
 
   return (
     <Dialog
@@ -112,7 +119,7 @@ export default function CvModal({ open, onClose }) {
         </IconButton>
       </DialogTitle>
 
-      <DialogContent sx={{ px: { xs: 3, md: 4 }, pt: 3, pb: 4 }}>
+      <DialogContent sx={{ px: { xs: 3, md: 4 }, pt: '36px !important', pb: 4 }}>
         {/* Header */}
         <Box sx={{
           mb: 3,
@@ -161,13 +168,13 @@ export default function CvModal({ open, onClose }) {
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 0.7, alignItems: { xs: 'flex-start', sm: 'flex-end' } }}>
             {[
               { icon: <EmailIcon sx={{ fontSize: 13 }} />, text: 'n.lozaspataro@gmail.com' },
-              { icon: <PhoneIcon sx={{ fontSize: 13 }} />, text: '+51 911 5622 6313' },
+              { icon: <PhoneIcon sx={{ fontSize: 13 }} />, text: '+54 911 5622 6313' },
               { icon: <LocationOnIcon sx={{ fontSize: 13 }} />, text: 'Buenos Aires, Argentina' },
               { icon: <LinkedInIcon sx={{ fontSize: 13, color: '#0A66C2' }} />, text: 'linkedin.com/in/nicolas-loza-spataro' },
             ].map(({ icon, text }) => (
               <Box key={text} sx={{ display: 'flex', alignItems: 'center', gap: 0.6 }}>
-                <Box sx={{ color: 'rgba(255,255,255,0.35)' }}>{icon}</Box>
-                <Typography variant="caption" sx={{ color: 'text.secondary', fontSize: '0.75rem' }}>{text}</Typography>
+                <Box sx={{ color: ICON_MUTED }}>{icon}</Box>
+                <Typography variant="caption" sx={{ color: TEXT_BODY, fontSize: '0.75rem' }}>{text}</Typography>
               </Box>
             ))}
           </Box>
@@ -175,7 +182,7 @@ export default function CvModal({ open, onClose }) {
 
         {/* Profile */}
         <CvSection title={cv.profile}>
-          <Typography variant="body2" sx={{ color: 'text.secondary', lineHeight: 1.75, fontSize: '0.85rem' }}>
+          <Typography variant="body2" sx={{ color: TEXT_BODY, lineHeight: 1.75, fontSize: '0.85rem' }}>
             {cv.profileText}
           </Typography>
         </CvSection>

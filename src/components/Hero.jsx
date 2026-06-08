@@ -8,7 +8,6 @@ import { motion } from 'framer-motion'
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward'
 import ArticleIcon from '@mui/icons-material/Article'
 import FolderOpenIcon from '@mui/icons-material/FolderOpen'
-import { FaLinkedinIn } from 'react-icons/fa6'
 import { useI18n } from '../App'
 
 const MotionBox = motion(Box)
@@ -118,7 +117,7 @@ export default function Hero({ onOpenCv }) {
                 variant="contained"
                 size="large"
                 startIcon={<FolderOpenIcon />}
-                onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })}
                 sx={{
                   background: 'linear-gradient(135deg, #7C3AED, #5B21B6)',
                   px: 3.5, py: 1.4, fontSize: '1rem',
@@ -146,28 +145,6 @@ export default function Hero({ onOpenCv }) {
               </Button>
             </MotionBox>
 
-            {/* Social icons */}
-            <MotionBox {...fadeUp(0.65)} sx={{ display: 'flex', gap: 1.5 }}>
-              <Box
-                component="a"
-                href="https://www.linkedin.com/in/nicolas-loza-spataro/"
-                target="_blank"
-                rel="noopener noreferrer"
-                sx={{
-                  width: 44, height: 44,
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  color: '#0A66C2',
-                  bgcolor: 'rgba(10,102,194,0.1)',
-                  border: '1px solid rgba(10,102,194,0.25)',
-                  borderRadius: 2,
-                  textDecoration: 'none',
-                  transition: 'all 0.2s ease',
-                  '&:hover': { bgcolor: 'rgba(10,102,194,0.2)', borderColor: 'rgba(10,102,194,0.5)', transform: 'translateY(-2px)' },
-                }}
-              >
-                <FaLinkedinIn size={18} />
-              </Box>
-            </MotionBox>
           </Box>
 
           {/* Right: avatar with glow */}

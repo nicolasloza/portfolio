@@ -16,8 +16,8 @@ const es = {
     title: 'Full Stack Developer',
     headline: 'Transformo ideas en\naplicaciones web\nque escalan.',
     subtitle:
-      '4 años construyendo productos con React y Node.js · De la pantalla al backend, sin fricción.',
-    ctaProjects: 'Ver proyectos',
+      '4 años escalando productos digitales de impacto real con React, Node.js y TypeScript.',
+    ctaProjects: 'Ver experiencia',
     ctaCv: 'Ver CV',
     scrollDown: 'Desplazar abajo',
   },
@@ -26,14 +26,14 @@ const es = {
   about: {
     sectionTitle: 'Sobre mí',
     paragraph1:
-      'Soy un desarrollador Full Stack con más de 4 años de experiencia construyendo aplicaciones web modernas. Me especializo en el ecosistema JavaScript, tanto en el frontend con React.js como en el backend con Node.js.',
+      'Soy Full Stack Developer con más de 4 años de experiencia construyendo y escalando productos digitales de impacto real. Me especializo en React, Node.js y TypeScript, con sólido manejo de PostgreSQL y experiencia en el ciclo completo de desarrollo: desde el diseño de arquitectura hasta el despliegue en producción.',
     paragraph2:
       'Trabajo con bases de datos relacionales como PostgreSQL y MySQL, y aplico buenas prácticas de desarrollo: código limpio, arquitecturas escalables y flujos de trabajo colaborativos con Git.',
     paragraph3:
-      'Actualmente lidero un equipo de desarrollo en PhinxLab, donde participé en la construcción de una plataforma educativa utilizada por más de 300.000 estudiantes en escuelas de Buenos Aires.',
+      'Actualmente lidero un equipo de 5 desarrolladores en PhinxLab, contribuyendo al desarrollo de una plataforma educativa utilizada por más de 300.000 usuarios en las escuelas de Buenos Aires.',
     location: 'Buenos Aires, Argentina',
     email: 'n.lozaspataro@gmail.com',
-    phone: '+51 911 5622 6313',
+    phone: '+54 911 5622 6313',
   },
 
   // Experience
@@ -44,23 +44,26 @@ const es = {
       {
         company: 'PhinxLab',
         role: 'Full-stack Developer',
-        period: 'Mayo 2023 - Actualidad',
+        period: 'Mayo 2023 – Actualidad',
         stack: ['TypeScript', 'Node.js', 'React', 'PostgreSQL', 'TypeORM', 'MaterialUI', 'Git', 'CircleCI'],
-        description: 'Lidero un equipo de 5 desarrolladores en el desarrollo y mantenimiento de una plataforma educativa con más de 300.000 usuarios activos en escuelas de Buenos Aires. Estoy a cargo de la arquitectura del sistema en frontend y backend, usando TypeScript, React y Node.js con TypeORM. Además, lideré la renovación completa de la UI, logrando una mejora significativa en la experiencia de usuario y la accesibilidad del producto.',
+        description:
+          'Lidero un equipo de 5 desarrolladores en el diseño, desarrollo y despliegue continuo de funcionalidades para una plataforma educativa usada por más de 300.000 usuarios en las escuelas de Buenos Aires. Lideré la renovación completa de la interfaz de usuario, a cargo de toda la implementación desde la arquitectura frontend hasta el despliegue en producción, logrando una experiencia más moderna, accesible e intuitiva. Coordino el ciclo completo del equipo: planificación, code reviews, resolución de errores críticos y despliegues, garantizando continuidad operativa para una plataforma de alto impacto social.',
       },
       {
         company: 'PhinxLab',
         role: 'Frontend Developer',
-        period: 'Enero 2023 - Abril 2023',
+        period: 'Enero 2023 – Abril 2023',
         stack: ['React Native', 'PostgreSQL', 'MaterialUI', 'Git', 'CircleCI'],
-        description: 'Desarrollé funcionalidades mobile para CIS Express, una de las redes multiservicio más grandes de Latinoamérica. Trabajé con React Native para garantizar una experiencia fluida y consistente en iOS y Android, integrando el sistema con el backend existente.',
+        description:
+          'Desarrollé funcionalidades mobile en React Native para CIS Express, una de las redes multiservicio más grandes de Latinoamérica, con servicios de envío de dinero, logística y pagos desde dispositivos móviles. Implementé nuevas funcionalidades contribuyendo a una experiencia de usuario más fluida y confiable. Trabajé en estrecha colaboración con los equipos de diseño y backend para garantizar interfaces intuitivas, accesibles y alineadas con los estándares de calidad del producto.',
       },
       {
         company: 'PhinxLab',
         role: 'Frontend Developer',
-        period: 'Mayo 2022 - Diciembre 2022',
-        stack: ['React Native', 'Next.js', 'PostgreSQL', 'MaterialUI'],
-        description: 'Desarrollé el sitio web oficial de PhinxLab y su back office administrativo. Utilicé Next.js para optimizar el rendimiento y el SEO del sitio público, y React Native para las interfaces del panel interno.',
+        period: 'Mayo 2022 – Diciembre 2022',
+        stack: ['Next.js', 'Node.js', 'MaterialUI', 'Git', 'CircleCI'],
+        description:
+          'Formé parte del equipo de desarrollo (TL + 2 devs) encargado del rediseño y desarrollo completo del sitio web oficial de la empresa, reemplazando el sitio anterior por una plataforma moderna construida con Next.js. Colaboré con el equipo de UX/UI en la definición de la nueva arquitectura de información, estructura visual y mejores prácticas de accesibilidad. Desarrollé el back office interno de la plataforma con foco en usabilidad para usuarios no técnicos, facilitando la gestión eficiente del sistema.',
       },
     ],
   },
@@ -75,14 +78,24 @@ const es = {
       tools: 'Herramientas',
     },
     frontend: ['React.js', 'React Native', 'Next.js', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Material UI', 'Bootstrap'],
-    backend: ['Node.js', 'TypeORM', 'REST APIs'],
-    databases: ['PostgreSQL', 'MySQL'],
+    backend: ['Node.js', 'Express.js', 'TypeORM', 'REST APIs'],
+    databases: ['PostgreSQL', 'MongoDB', 'MySQL'],
     tools: ['Git', 'GitHub', 'Cursor', 'Claude', 'Jira', 'Postman', 'CircleCI'],
     education: 'Educación',
     eduItems: [
       {
         institution: 'Coderhouse',
-        course: 'JavaScript y Desarrollo Web',
+        course: 'Programación Backend I: Desarrollo Avanzado de Backend',
+        period: 'Ene 2026 – Mar 2026',
+      },
+      {
+        institution: 'Coderhouse',
+        course: 'JavaScript',
+        period: 'Jul 2022 – Oct 2022',
+      },
+      {
+        institution: 'Coderhouse',
+        course: 'Desarrollo Web',
         period: 'Jul 2022 – Oct 2022',
       },
     ],
@@ -99,22 +112,22 @@ const es = {
       {
         title: 'aprendeBA',
         description:
-          'Plataforma educativa a gran escala para escuelas de Buenos Aires. +300.000 usuarios activos. Stack: React, Node.js, PostgreSQL, TypeORM.',
-        tags: ['React', 'Node.js', 'PostgreSQL', 'TypeScript'],
+          'Plataforma educativa a gran escala para escuelas de Buenos Aires. +300.000 usuarios activos. Stack: TypeScript, React, Node.js, PostgreSQL, TypeORM.',
+        tags: ['TypeScript', 'React', 'Node.js', 'PostgreSQL', 'TypeORM'],
         status: 'professional',
       },
       {
         title: 'CIS Express Mobile',
         description:
-          'Aplicación mobile para una de las redes multiservicio más grandes de Latinoamérica. Desarrollo con React Native.',
-        tags: ['React Native', 'MaterialUI', 'CircleCI'],
+          'Aplicación mobile para CIS Express, una de las redes multiservicio más grandes de Latinoamérica, con servicios de envío de dinero, logística y pagos.',
+        tags: ['React Native', 'PostgreSQL', 'MaterialUI', 'CircleCI'],
         status: 'professional',
       },
       {
         title: 'Sitio Corporativo PhinxLab',
         description:
-          'Sitio web oficial y back office administrativo desarrollado con Next.js y React Native.',
-        tags: ['Next.js', 'React Native', 'MaterialUI'],
+          'Rediseño y desarrollo completo del sitio web oficial de PhinxLab con Next.js, más back office interno para gestión operativa.',
+        tags: ['Next.js', 'Node.js', 'MaterialUI'],
         status: 'professional',
       },
     ],
@@ -135,11 +148,11 @@ const es = {
   cv: {
     title: 'Currículum Vitae',
     close: 'Cerrar',
-    print: 'Imprimir / Descargar PDF',
+    print: 'Descargar',
     personalInfo: 'Información personal',
     profile: 'Perfil profesional',
     profileText:
-      'Desarrollador Full Stack con 4 años de experiencia en desarrollo de aplicaciones web. Especializado en Node.js y React.js. Conocimiento sólido en bases de datos relacionales como MySQL y PostgreSQL, con enfoque en buenas prácticas de desarrollo y trabajo en equipo.',
+      'Full Stack Developer con más de 4 años de experiencia construyendo y escalando productos digitales de impacto real. Me especializo en React, Node.js y TypeScript, con sólido manejo de PostgreSQL y experiencia en el ciclo completo de desarrollo: desde el diseño de arquitectura hasta el despliegue en producción. Actualmente lidero un equipo de 5 desarrolladores en PhinxLab, donde contribuyo al desarrollo de una plataforma educativa utilizada por más de 300.000 usuarios en las escuelas de Buenos Aires.',
     experience: 'Experiencia laboral',
     skills: 'Tecnologías',
     tools: 'Herramientas',
