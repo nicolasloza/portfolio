@@ -142,7 +142,7 @@ export default function Experience() {
                           sx={{
                             bgcolor: 'rgba(124,58,237,0.1)',
                             color: 'primary.light',
-                            border: '1px solid rgba(124,58,237,0.25)',
+                            border: '1px solid rgba(124,58,237,0.2)',
                             fontSize: '0.72rem',
                             fontWeight: 500,
                           }}

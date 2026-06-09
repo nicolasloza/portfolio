@@ -229,7 +229,7 @@ export default function Contact() {
       href: 'tel:+5491156226313',
     },
     {
-      icon: <LocationOnIcon sx={{ color: '#34D399' }} />,
+      icon: <LocationOnIcon sx={{ color: 'success.main' }} />,
       label: c.location,
       value: c.locationValue,
       href: null,

@@ -24,6 +24,11 @@ const theme = createTheme({
       secondary: '#94A3B8',
     },
     divider: 'rgba(124, 58, 237, 0.15)',
+    success: {
+      main: '#10B981',
+      light: '#34D399',
+      dark: '#059669',
+    },
   },
   typography: {
     fontFamily: '"Inter", sans-serif',

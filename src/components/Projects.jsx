@@ -80,35 +80,53 @@ export default function Projects() {
                     },
                   }}
                 >
-                  {/* Card header gradient */}
+                  {/* Card header: imagen o gradiente fallback */}
                   <Box
                     sx={{
-                      height: 90,
-                      background: GRADIENT_HEADERS[idx % GRADIENT_HEADERS.length],
+                      height: 160,
+                      position: 'relative',
+                      overflow: 'hidden',
+                      background: project.image
+                        ? '#ffffff'
+                        : GRADIENT_HEADERS[idx % GRADIENT_HEADERS.length],
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      position: 'relative',
+                      borderBottom: project.image ? '1px solid rgba(124,58,237,0.15)' : 'none',
                     }}
                   >
-                    <BusinessCenterIcon
-                      sx={{
-                        fontSize: 48,
-                        color: 'rgba(255,255,255,0.15)',
-                      }}
-                    />
-                    {project.status === 'professional' && (
+                    {project.image ? (
+                      <Box
+                        component="img"
+                        src={`${import.meta.env.BASE_URL}${project.image}`}
+                        alt={project.title}
+                        sx={{
+                          width: '100%',
+                          height: '100%',
+                          objectFit: 'contain',
+                          objectPosition: 'center',
+                          padding: project.imagePadding ?? '12px',
+                          display: 'block',
+                        }}
+                      />
+                    ) : (
+                      <BusinessCenterIcon sx={{ fontSize: 48, color: 'rgba(255,255,255,0.15)' }} />
+                    )}
+                    {project.status !== undefined && (
                       <Chip
-                        label="Professional"
+                        label={project.status === 'professional' ? 'Professional' : 'Personal'}
                         size="small"
                         sx={{
                           position: 'absolute',
                           top: 12,
                           right: 12,
-                          bgcolor: 'rgba(0,0,0,0.4)',
-                          color: 'text.secondary',
+                          bgcolor: project.status === 'professional'
+                            ? 'rgba(124,58,237,0.9)'
+                            : 'rgba(6,182,212,0.9)',
+                          color: '#fff',
                           fontSize: '0.68rem',
-                          border: '1px solid rgba(255,255,255,0.1)',
+                          fontWeight: 600,
+                          border: 'none',
                         }}
                       />
                     )}
@@ -128,7 +146,7 @@ export default function Projects() {
                           label={tag}
                           size="small"
                           sx={{
-                            bgcolor: 'rgba(124,58,237,0.08)',
+                            bgcolor: 'rgba(124,58,237,0.1)',
                             color: 'primary.light',
                             border: '1px solid rgba(124,58,237,0.2)',
                             fontSize: '0.7rem',

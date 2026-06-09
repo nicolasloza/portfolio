@@ -4,9 +4,6 @@ import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Grid'
 import Paper from '@mui/material/Paper'
 import { motion } from 'framer-motion'
-import EmailIcon from '@mui/icons-material/Email'
-import PhoneIcon from '@mui/icons-material/Phone'
-import LocationOnIcon from '@mui/icons-material/LocationOn'
 import { useI18n } from '../App'
 
 const MotionBox = motion(Box)
@@ -36,11 +33,28 @@ function SectionTitle({ children }) {
   )
 }
 
-const infoItems = (t) => [
-  { icon: <LocationOnIcon />, label: t.about.location },
-  { icon: <EmailIcon />, label: t.about.email },
-  { icon: <PhoneIcon />, label: t.about.phone },
-]
+function StatBox({ value, label }) {
+  return (
+    <Box sx={{ textAlign: 'center', flex: 1 }}>
+      <Typography
+        variant="h4"
+        sx={{
+          fontWeight: 800,
+          background: 'linear-gradient(135deg, #7C3AED, #06B6D4)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          lineHeight: 1.1,
+          mb: 0.5,
+        }}
+      >
+        {value}
+      </Typography>
+      <Typography variant="caption" sx={{ color: 'text.secondary', lineHeight: 1.3, display: 'block' }}>
+        {label}
+      </Typography>
+    </Box>
+  )
+}
 
 export default function About() {
   const { t } = useI18n()
@@ -66,7 +80,7 @@ export default function About() {
           <SectionTitle>{t.about.sectionTitle}</SectionTitle>
         </MotionBox>
 
-        <Grid container spacing={6} alignItems="flex-start">
+        <Grid container spacing={6} alignItems="center">
           {/* Text */}
           <Grid item xs={12} md={7}>
             <MotionBox
@@ -75,19 +89,16 @@ export default function About() {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.7, delay: 0.1 }}
             >
-              <Typography variant="body1" sx={{ color: 'text.secondary', mb: 2.5 }}>
+              <Typography variant="body1" sx={{ color: 'text.secondary', mb: 2.5, lineHeight: 1.8 }}>
                 {t.about.paragraph1}
               </Typography>
-              <Typography variant="body1" sx={{ color: 'text.secondary', mb: 2.5 }}>
+              <Typography variant="body1" sx={{ color: 'text.secondary', lineHeight: 1.8 }}>
                 {t.about.paragraph2}
-              </Typography>
-              <Typography variant="body1" sx={{ color: 'text.secondary' }}>
-                {t.about.paragraph3}
               </Typography>
             </MotionBox>
           </Grid>
 
-          {/* Info card */}
+          {/* Stats card */}
           <Grid item xs={12} md={5}>
             <MotionBox
               initial={{ opacity: 0, x: 30 }}
@@ -104,20 +115,17 @@ export default function About() {
                   borderRadius: 3,
                 }}
               >
-                <Typography
-                  variant="overline"
-                  sx={{ color: 'primary.main', fontWeight: 700, letterSpacing: 2, mb: 2, display: 'block' }}
-                >
-                  Info
-                </Typography>
-                {infoItems(t).map(({ icon, label }) => (
-                  <Box key={label} sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 2 }}>
-                    <Box sx={{ color: 'primary.main', display: 'flex', flexShrink: 0 }}>{icon}</Box>
-                    <Typography variant="body2" sx={{ color: 'text.secondary', wordBreak: 'break-word' }}>
-                      {label}
-                    </Typography>
-                  </Box>
-                ))}
+                <Box sx={{ display: 'flex', gap: 2, mb: 3 }}>
+                  <StatBox value="4+" label={t.about.statYears} />
+                  <Box sx={{ width: '1px', bgcolor: 'rgba(124,58,237,0.15)' }} />
+                  <StatBox value="300k+" label={t.about.statUsers} />
+                </Box>
+                <Box sx={{ width: '100%', height: '1px', bgcolor: 'rgba(124,58,237,0.15)', mb: 3 }} />
+                <Box sx={{ display: 'flex', gap: 2 }}>
+                  <StatBox value="5" label={t.about.statDevs} />
+                  <Box sx={{ width: '1px', bgcolor: 'rgba(124,58,237,0.15)' }} />
+                  <StatBox value="Full Stack" label={t.about.statFullStack} />
+                </Box>
               </Paper>
             </MotionBox>
           </Grid>

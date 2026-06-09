@@ -28,12 +28,12 @@ const en = {
     paragraph1:
       'I am a Full Stack Developer with over 4 years of experience building and scaling real-impact digital products. I specialize in React, Node.js and TypeScript, with solid PostgreSQL knowledge and experience across the full development cycle: from architecture design to production deployment.',
     paragraph2:
-      'I work with relational databases such as PostgreSQL and MySQL, and I apply development best practices: clean code, scalable architectures, and collaborative Git workflows.',
-    paragraph3:
-      'I currently lead a team of 5 developers at PhinxLab, contributing to an educational platform used by more than 300,000 students across schools in Buenos Aires.',
+      'I currently lead a team of 5 developers at PhinxLab, contributing to an educational platform used by more than 300,000 users across schools in Buenos Aires.',
     location: 'Buenos Aires, Argentina',
-    email: 'n.lozaspataro@gmail.com',
-    phone: '+54 911 5622 6313',
+    statYears: 'years of experience',
+    statUsers: 'users impacted',
+    statDevs: 'devs managed',
+    statFullStack: 'Frontend · Backend · DB',
   },
 
   // Experience
@@ -122,6 +122,8 @@ const en = {
           "Mobile app for CIS Express, one of Latin America's largest multi-service networks, offering money transfers, logistics and mobile payments.",
         tags: ['React Native', 'PostgreSQL', 'MaterialUI', 'CircleCI'],
         status: 'professional',
+        image: 'projects/cis-express.png',
+        imagePadding: '20px',
       },
       {
         title: 'PhinxLab Corporate Site',
@@ -129,6 +131,8 @@ const en = {
           "Full redesign and rebuild of PhinxLab's official website with Next.js, plus an internal back office for operational management.",
         tags: ['Next.js', 'Node.js', 'MaterialUI'],
         status: 'professional',
+        image: 'projects/phinxlab.png',
+        imagePadding: '4px',
       },
       {
         title: 'Real Estate Platform',
@@ -136,8 +140,8 @@ const en = {
           'Full-stack web platform for managing and publishing real estate listings. Includes property listing with filters, unit detail pages, and a contact form with email delivery.',
         tags: ['React', 'MUI', 'Express.js', 'Prisma', 'Node.js', 'Zod'],
         status: 'personal',
-        hidden: true,
         repo: 'https://github.com/nicolasloza/ap-web',
+        demo: 'https://armando-pepe.vercel.app/',
       },
     ],
   },

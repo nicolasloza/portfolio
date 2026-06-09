@@ -28,12 +28,12 @@ const es = {
     paragraph1:
       'Soy Full Stack Developer con más de 4 años de experiencia construyendo y escalando productos digitales de impacto real. Me especializo en React, Node.js y TypeScript, con sólido manejo de PostgreSQL y experiencia en el ciclo completo de desarrollo: desde el diseño de arquitectura hasta el despliegue en producción.',
     paragraph2:
-      'Trabajo con bases de datos relacionales como PostgreSQL y MySQL, y aplico buenas prácticas de desarrollo: código limpio, arquitecturas escalables y flujos de trabajo colaborativos con Git.',
-    paragraph3:
-      'Actualmente lidero un equipo de 5 desarrolladores en PhinxLab, contribuyendo al desarrollo de una plataforma educativa utilizada por más de 300.000 usuarios en las escuelas de Buenos Aires.',
+      'Actualmente lidero un equipo de 5 desarrolladores en PhinxLab, contribuyendo a una plataforma educativa utilizada por más de 300.000 usuarios en las escuelas de Buenos Aires.',
     location: 'Buenos Aires, Argentina',
-    email: 'n.lozaspataro@gmail.com',
-    phone: '+54 911 5622 6313',
+    statYears: 'años de experiencia',
+    statUsers: 'usuarios impactados',
+    statDevs: 'devs a cargo',
+    statFullStack: 'Frontend · Backend · DB',
   },
 
   // Experience
@@ -122,6 +122,8 @@ const es = {
           'Aplicación mobile para CIS Express, una de las redes multiservicio más grandes de Latinoamérica, con servicios de envío de dinero, logística y pagos.',
         tags: ['React Native', 'PostgreSQL', 'MaterialUI', 'CircleCI'],
         status: 'professional',
+        image: 'projects/cis-express.png',
+        imagePadding: '20px',
       },
       {
         title: 'Sitio Corporativo PhinxLab',
@@ -129,6 +131,8 @@ const es = {
           'Rediseño y desarrollo completo del sitio web oficial de PhinxLab con Next.js, más back office interno para gestión operativa.',
         tags: ['Next.js', 'Node.js', 'MaterialUI'],
         status: 'professional',
+        image: 'projects/phinxlab.png',
+        imagePadding: '4px',
       },
       {
         title: 'Plataforma Inmobiliaria',
@@ -136,8 +140,8 @@ const es = {
           'Plataforma web full-stack para gestión y publicación de propiedades inmobiliarias. Incluye listado de propiedades con filtros, detalle de cada unidad y formulario de contacto con envío de emails.',
         tags: ['React', 'MUI', 'Express.js', 'Prisma', 'Node.js', 'Zod'],
         status: 'personal',
-        hidden: true,
         repo: 'https://github.com/nicolasloza/ap-web',
+        demo: 'https://armando-pepe.vercel.app/',
       },
     ],
   },
